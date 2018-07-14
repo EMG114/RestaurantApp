@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="RHl-C6-3yz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="RHl-C6-3yz" customClass="RestaurantTableViewCell" customModule="RestaurantApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RHl-C6-3yz" id="zPQ-l4-DMO">
@@ -29,12 +29,17 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="VKJ-9K-Rc0">
                                             <rect key="frame" x="16" y="13" width="337" height="54.5"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Gi-l5O">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gga-Gi-l5O">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="54.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="Yp7-eo-uj6"/>
                                                         <constraint firstAttribute="height" constant="54.5" id="ati-OY-ZYl"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="GR9-0N-QOR">
                                                     <rect key="frame" x="75" y="0.0" width="262" height="54.5"/>
@@ -69,6 +74,12 @@
                                         <constraint firstItem="VKJ-9K-Rc0" firstAttribute="top" secondItem="zPQ-l4-DMO" secondAttribute="topMargin" constant="2" id="ek3-wX-x5V"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="IHL-RL-Aeb" id="1mX-rB-ptz"/>
+                                    <outlet property="nameLabel" destination="AqG-Lh-UKd" id="qmU-H2-a8T"/>
+                                    <outlet property="thumbnailImageView" destination="gga-Gi-l5O" id="1GN-jG-a2b"/>
+                                    <outlet property="typeLabel" destination="UTN-6S-Spd" id="amQ-Ea-MdK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

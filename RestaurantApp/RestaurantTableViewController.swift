@@ -11,6 +11,7 @@ import UIKit
 class RestaurantTableViewController: UITableViewController {
     
     var restaurantNames = ["Boulud", "Momofuku Nishi", "Per Se"]
+    var restaurantImages = ["restaurant.jpg", "restaurant2.jpg","restaurant3.jpg"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +45,13 @@ class RestaurantTableViewController: UITableViewController {
         
         let cellIdentifier = "Cell"
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
 
         // Configure the cell...
         
-        cell.textLabel?.text = restaurantNames[indexPath.row]
-        cell.imageView?.image = UIImage(named:"restaurant.jpg" )
+        cell.nameLabel.text = restaurantNames[indexPath.row]
+       // cell.locationLabel
+        cell.thumbnailImageView.image  = UIImage(named: restaurantImages[indexPath.row] )
 
         return cell
     }
