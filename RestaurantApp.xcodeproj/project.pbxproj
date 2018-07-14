@@ -12,6 +12,7 @@
 		0758C66A20FA8D24001BB188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0758C66920FA8D24001BB188 /* Assets.xcassets */; };
 		0758C66D20FA8D24001BB188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0758C66B20FA8D24001BB188 /* LaunchScreen.storyboard */; };
 		0758C67520FA8EB4001BB188 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0758C67420FA8EB4001BB188 /* RestaurantTableViewController.swift */; };
+		0758C67720FA947B001BB188 /* restaurant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0758C67620FA947B001BB188 /* restaurant.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0758C66C20FA8D24001BB188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0758C66E20FA8D24001BB188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0758C67420FA8EB4001BB188 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		0758C67620FA947B001BB188 /* restaurant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				0758C67420FA8EB4001BB188 /* RestaurantTableViewController.swift */,
 				0758C66220FA8D23001BB188 /* AppDelegate.swift */,
 				0758C66620FA8D23001BB188 /* Main.storyboard */,
+				0758C67620FA947B001BB188 /* restaurant.jpg */,
 				0758C66920FA8D24001BB188 /* Assets.xcassets */,
 				0758C66B20FA8D24001BB188 /* LaunchScreen.storyboard */,
 				0758C66E20FA8D24001BB188 /* Info.plist */,
@@ -124,6 +127,7 @@
 			files = (
 				0758C66D20FA8D24001BB188 /* LaunchScreen.storyboard in Resources */,
 				0758C66A20FA8D24001BB188 /* Assets.xcassets in Resources */,
+				0758C67720FA947B001BB188 /* restaurant.jpg in Resources */,
 				0758C66820FA8D23001BB188 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
