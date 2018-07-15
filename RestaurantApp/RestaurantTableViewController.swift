@@ -12,10 +12,19 @@ class RestaurantTableViewController: UITableViewController {
     
     var restaurantNames = ["Boulud", "Momofuku Nishi", "Per Se"]
     var restaurantImages = ["restaurant.jpg", "restaurant2.jpg","restaurant3.jpg"]
+    var restaurantWasVisited = Array(repeating: false, count: 21)
+
+    
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        tableView.cellLayoutMarginsFollowReadableWidth = true
+     
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,7 +38,16 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+      
+        if let popoverController = optionMenu.popoverPresentationController
+        {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
         
         //add action to menu
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -42,25 +60,27 @@ class RestaurantTableViewController: UITableViewController {
             
         }
 
-       let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+       let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
        
         let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             
             let cell = tableView.cellForRow(at: indexPath)
-                cell?.accessoryType = .checkmark })
+                cell?.accessoryType = .checkmark
+            self.restaurantWasVisited[indexPath.row] = true
+           
+            
+          
+        })
         
         optionMenu.addAction(checkInAction)
         
         
-       
-        
-        
-        
-        
         //present and display menu
         present(optionMenu, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 
     // MARK: - Table view data source
@@ -87,6 +107,12 @@ class RestaurantTableViewController: UITableViewController {
         cell.nameLabel.text = restaurantNames[indexPath.row]
        // cell.locationLabel
         cell.thumbnailImageView.image  = UIImage(named: restaurantImages[indexPath.row] )
+        
+        if restaurantWasVisited[indexPath.row]{
+            cell.accessoryType = .checkmark } else {
+            cell.accessoryType = .none
+        }
+        
 
         return cell
     }
