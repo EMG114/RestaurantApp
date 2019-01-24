@@ -63,13 +63,26 @@ class RestaurantTableViewController: UITableViewController {
        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
         optionMenu.addAction(callAction)
        
+        let checkActionTitle = (restaurantWasVisited[indexPath.row]) ? "Undo Check in" : "Check in"
+        
         let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             
             let cell = tableView.cellForRow(at: indexPath)
                 cell?.accessoryType = .checkmark
             self.restaurantWasVisited[indexPath.row] = true
-           
+            // Solution to exercise #1
+            // ---
+            // Toggle the accessoryType and the value of restaurantIsVisited[indexPath.row]
+            // If the value of self.restaurantIsVisited[indexPath.row] is true, we set the accessory type to .none.
+            
+            cell?.accessoryType = (self.restaurantWasVisited[indexPath.row]) ? .none : .checkmark
+            
+            // Solution to exercise #2
+            // ---
+            // Use the isHidden property to control the appearance of the heart icon
+            
+           // cell.heartImageView.isHidden = self.restaurantIsVisited[indexPath.row] ? false : true
             
           
         })
@@ -107,6 +120,13 @@ class RestaurantTableViewController: UITableViewController {
         cell.nameLabel.text = restaurantNames[indexPath.row]
        // cell.locationLabel
         cell.thumbnailImageView.image  = UIImage(named: restaurantImages[indexPath.row] )
+        
+        // Solution to Exercise #1
+         cell.accessoryType = restaurantWasVisited[indexPath.row] ? .checkmark : .none
+        
+        // Solution to Exercise #2
+        // Use the isHidden property to control the appearance of the heart icon
+      //  cell.heartImageView.isHidden = restaurantWasVisited[indexPath.row] ? false : true
         
         if restaurantWasVisited[indexPath.row]{
             cell.accessoryType = .checkmark } else {

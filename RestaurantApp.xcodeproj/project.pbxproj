@@ -16,6 +16,7 @@
 		0758C67920FA9FA2001BB188 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0758C67820FA9FA2001BB188 /* RestaurantTableViewCell.swift */; };
 		0758C67B20FAA5C9001BB188 /* restaurant3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0758C67A20FAA5C9001BB188 /* restaurant3.jpg */; };
 		0758C67D20FAA5D0001BB188 /* restaurant2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0758C67C20FAA5CF001BB188 /* restaurant2.jpg */; };
+		0758C67F20FB01BD001BB188 /* heart-tick.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0758C67E20FB01BD001BB188 /* heart-tick.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0758C67820FA9FA2001BB188 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		0758C67A20FAA5C9001BB188 /* restaurant3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant3.jpg; sourceTree = "<group>"; };
 		0758C67C20FAA5CF001BB188 /* restaurant2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurant2.jpg; sourceTree = "<group>"; };
+		0758C67E20FB01BD001BB188 /* heart-tick.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "heart-tick.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				0758C67420FA8EB4001BB188 /* RestaurantTableViewController.swift */,
+				0758C67E20FB01BD001BB188 /* heart-tick.pdf */,
 				0758C67820FA9FA2001BB188 /* RestaurantTableViewCell.swift */,
 				0758C66220FA8D23001BB188 /* AppDelegate.swift */,
 				0758C66620FA8D23001BB188 /* Main.storyboard */,
@@ -108,6 +111,7 @@
 				TargetAttributes = {
 					0758C65E20FA8D23001BB188 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -139,6 +143,7 @@
 				0758C66A20FA8D24001BB188 /* Assets.xcassets in Resources */,
 				0758C67B20FAA5C9001BB188 /* restaurant3.jpg in Resources */,
 				0758C67720FA947B001BB188 /* restaurant.jpg in Resources */,
+				0758C67F20FB01BD001BB188 /* heart-tick.pdf in Resources */,
 				0758C66820FA8D23001BB188 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +310,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericag.RestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -323,7 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ericag.RestaurantApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
